@@ -145,7 +145,6 @@ footer {
     color: #777;
 }
 
-/* EXTRA SMALL DEVICES */
 @media (max-width: 360px) {
     h1 { font-size: 22px; }
     .logo { width: 130px; height: 130px; }
@@ -153,7 +152,7 @@ footer {
 }
 </style>
 
-<!-- Meta Pixel Code -->
+<!-- META PIXEL (ONE TIME PER DEVICE) -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -163,9 +162,14 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '739727151721207');
-fbq('track', 'PageView');
+
+if (!localStorage.getItem("pb_pageview_fired")) {
+    fbq('init', '739727151721207');
+    fbq('track', 'PageView');
+    localStorage.setItem("pb_pageview_fired", "true");
+}
 </script>
+
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=739727151721207&ev=PageView&noscript=1"/>
@@ -176,14 +180,15 @@ src="https://www.facebook.com/tr?id=739727151721207&ev=PageView&noscript=1"/>
 
 <div class="container">
 
-<img src="https://uploads.onecompiler.io/446vwj75z/44b2b7cwe/WhatsApp%20Image%202026-01-19%20at%2011.45.32.jpeg" class="logo" alt="Official Pankaj Bhardwaj">
+<img src="https://uploads.onecompiler.io/446vwj75z/44b2b7cwe/WhatsApp%20Image%202026-01-19%20at%2011.45.32.jpeg"
+class="logo" alt="Official Pankaj Bhardwaj">
 
 <h1>
 <svg class="crown" viewBox="0 0 64 64">
 <path d="M6 44h52l-6 14H12z"/>
 <path d="M6 20l12 12 14-18 14 18 12-12-6 24H12z"/>
 </svg>
-Official Pankaj Bhardwaj
+𝐏𝐚𝐧𝐤𝐚𝐣 𝐁𝐡𝐚𝐫𝐝𝐰𝐚𝐣
 <svg class="crown" viewBox="0 0 64 64">
 <path d="M6 44h52l-6 14H12z"/>
 <path d="M6 20l12 12 14-18 14 18 12-12-6 24H12z"/>
@@ -199,7 +204,11 @@ India’s Best Stock Market Channel
 
 <p>Start your jackpot profit journey today!</p>
 
-<a href="https://t.me/+wp6SQOlPQEBiNTVl" class="btn" target="_blank" rel="noopener noreferrer">
+<a href="https://t.me/+wp6SQOlPQEBiNTVl"
+class="btn"
+target="_blank"
+rel="noopener noreferrer"
+id="joinTelegram">
 <svg class="tg-icon" viewBox="0 0 24 24">
 <path d="M22 2L2 11l5 2 2 6 4-4 5 4 4-17z"/>
 </svg>
@@ -235,19 +244,30 @@ Intraday, Options, NIFTY & BANKNIFTY Calls
 </div>
 
 <script>
+/* PROFIT FEED */
 const profitBox = document.getElementById("profitBox");
 const names = ["Rajesh","Priya","Anil","Kiran","Neha","Suresh","Divya","Vikram","Pooja","Ravi"];
 
 function generateProfit() {
-const name = names[Math.floor(Math.random() * names.length)];
-const amount = (Math.random() * 5000 + 500).toFixed(2);
-const div = document.createElement("div");
-div.className = "profit-entry";
-div.innerHTML = `<span>${name}</span><span class="profit-amount">+₹${amount}</span>`;
-profitBox.prepend(div);
-if (profitBox.childElementCount > 6) profitBox.removeChild(profitBox.lastChild);
+    const name = names[Math.floor(Math.random() * names.length)];
+    const amount = (Math.random() * 5000 + 500).toFixed(2);
+    const div = document.createElement("div");
+    div.className = "profit-entry";
+    div.innerHTML = `<span>${name}</span><span class="profit-amount">+₹${amount}</span>`;
+    profitBox.prepend(div);
+    if (profitBox.childElementCount > 6) {
+        profitBox.removeChild(profitBox.lastChild);
+    }
 }
 setInterval(generateProfit, 2000);
+
+/* SUBSCRIBE EVENT – ONE TIME */
+document.getElementById("joinTelegram").addEventListener("click", function () {
+    if (!localStorage.getItem("pb_subscribe_fired")) {
+        fbq('track', 'Subscribe');
+        localStorage.setItem("pb_subscribe_fired", "true");
+    }
+});
 </script>
 
 </body>
