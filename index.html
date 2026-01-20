@@ -2,272 +2,222 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Official Pankaj Bhardwaj</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Gujarati Trader</title>
 
-<style>
-/* ===== ORIGINAL CSS – UNCHANGED ===== */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-}
-.container {
-    max-width: 600px;
-    width: 92%;
-    margin: 30px auto;
-    background: #0d0d0d;
-    border-radius: 20px;
-    padding: 25px 20px;
-    box-shadow: 0 8px 30px rgba(255,215,0,0.25);
-}
-.logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 35px rgba(255,215,0,0.6);
-}
-h1 {
-    font-size: 26px;
-    font-weight: 700;
-    margin: 18px 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-p {
-    font-size: 15px;
-    color: #ccc;
-    margin: 6px 0;
-}
-.icon {
-    width: 18px;
-    height: 18px;
-    stroke: gold;
-    fill: none;
-    stroke-width: 3;
-    margin-right: 6px;
-    vertical-align: middle;
-    animation: float 2s infinite ease-in-out, glow 2s infinite alternate;
-}
-.icon-fill {
-    fill: gold;
-    stroke: gold;
-}
-@keyframes glow {
-    from { filter: drop-shadow(0 0 6px gold); }
-    to { filter: drop-shadow(0 0 14px orange); }
-}
-@keyframes float {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
-}
-.crown {
-    width: 28px;
-    height: 28px;
-    fill: gold;
-    animation: glow 1.8s infinite alternate;
-}
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 18px;
-    padding: 14px 22px;
-    width: 100%;
-    max-width: 320px;
-    background-color: #ff2d2d;
-    color: #fff;
-    border-radius: 50px;
-    font-size: 17px;
-    text-decoration: none;
-    animation: pulse 1.5s infinite;
-}
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(255,45,45,.6); }
-    70% { box-shadow: 0 0 0 15px rgba(255,45,45,0); }
-    100% { box-shadow: 0 0 0 0 rgba(255,45,45,0); }
-}
-.tg-icon {
-    width: 20px;
-    height: 20px;
-    fill: gold;
-}
-.section {
-    margin-top: 25px;
-}
-.profit-box {
-    background: #111;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 15px;
-    height: 170px;
-    overflow: hidden;
-}
-.profit-entry {
-    font-size: 14px;
-    margin: 8px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #eee;
-}
-.profit-amount {
-    color: #00ff88;
-    font-weight: bold;
-}
-footer {
-    margin-top: 25px;
-    font-size: 12px;
-    color: #777;
-}
-@media (max-width: 360px) {
-    h1 { font-size: 22px; }
-    .logo { width: 130px; height: 130px; }
-    p { font-size: 14px; }
-}
-</style>
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-<!-- ===== META PIXEL BASE (UNCHANGED STRUCTURE) ===== -->
+<!-- META PIXEL -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-/* ✅ INIT ALWAYS */
-fbq('init', '739727151721207');
-
-/* ✅ PAGE VIEW – ONE TIME PER DEVICE */
-if (!localStorage.getItem("pb_pageview_fired")) {
-    fbq('track', 'PageView');
-    localStorage.setItem("pb_pageview_fired", "true");
-}
+fbq('init', '1874126169892266');
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=739727151721207&ev=PageView&noscript=1"/>
+src="https://www.facebook.com/tr?id=1874126169892266&ev=PageView&noscript=1"/>
 </noscript>
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#000;
+  color:#fff;
+  text-align:center;
+}
+
+/* HERO */
+.hero{
+  padding:40px 20px 30px;
+}
+
+/* LOGO */
+.hero img{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid rgba(255,255,255,0.2);
+  box-shadow:
+    0 0 20px rgba(255,215,0,0.8),
+    0 0 40px rgba(0,198,255,0.4);
+  margin-bottom:16px;
+}
+
+/* NAME */
+.trader-name{
+  font-size:26px;
+  font-weight:800;
+  margin-bottom:14px;
+  background:linear-gradient(90deg,#00c6ff,#8e2de2,#ff0080);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* CTA */
+.cta{
+  display:inline-block;
+  width:100%;
+  max-width:360px;
+  padding:16px;
+  margin:0 auto 22px;
+  font-size:17px;
+  font-weight:800;
+  border-radius:50px;
+  background:linear-gradient(90deg,#ff0080,#8e2de2,#00c6ff);
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,0,0,.7);
+  transition:.2s ease;
+}
+.cta:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 30px rgba(0,198,255,.9);
+}
+
+/* TITLE */
+.hero h1{
+  font-size:30px;
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.hero p{
+  font-size:15px;
+  color:#ccc;
+}
+
+/* INFO */
+.info{
+  padding:28px 20px;
+}
+
+.card{
+  background:linear-gradient(180deg,#0f1629,#05070d);
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 0 30px rgba(0,255,255,.12);
+}
+
+.point{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  margin:14px 0;
+}
+
+.point i{
+  font-size:18px;
+  color:#00c6ff;
+}
+
+.point span{
+  font-size:15px;
+  text-align:left;
+}
+
+/* FOOTER */
+.footer{
+  padding:20px 10px;
+  font-size:13px;
+  color:#aaa;
+}
+</style>
 </head>
+
 <body>
 
-<div class="container">
+<section class="hero">
 
-<img src="https://uploads.onecompiler.io/446vwj75z/44b2b7cwe/WhatsApp%20Image%202026-01-19%20at%2011.45.32.jpeg"
-class="logo" alt="Official Pankaj Bhardwaj">
+  <img src="https://uploads.onecompiler.io/446vwj75z/448zrd6vz/WhatsApp%20Image%202025-12-29%20at%2018.24.42.jpeg"
+       alt="Gujarati Trader Logo">
 
-<h1>
-<svg class="crown" viewBox="0 0 64 64">
-<path d="M6 44h52l-6 14H12z"/>
-<path d="M6 20l12 12 14-18 14 18 12-12-6 24H12z"/>
-</svg>
-𝐏𝐚𝐧𝐤𝐚𝐣 𝐁𝐡𝐚𝐫𝐝𝐰𝐚𝐣
-<svg class="crown" viewBox="0 0 64 64">
-<path d="M6 44h52l-6 14H12z"/>
-<path d="M6 20l12 12 14-18 14 18 12-12-6 24H12z"/>
-</svg>
-</h1>
-<h1>
-<svg class="crown" viewBox="0 0 64 64">
-<path d="M6 44h52l-6 14H12z"/>
-<path d="M6 20l12 12 14-18 14 18 12-12-6 24H12z"/>
-</svg>
-S̳̿͟͞E̳̿͟͞B̳̿͟͞I̳̿͟͞-R̳̿͟͞E̳̿͟͞G̳̿͟͞E̳̿͟͞S̳̿͟͞T̳̿͟͞E̳̿͟͞R̳̿͟͞E̳̿͟͞D̳̿͟͞ T̳̿͟͞R̳̿͟͞A̳̿͟͞D̳̿͟͞E̳̿͟͞R̳̿͟͞
-<svg class="crown" viewBox="0 0 64 64">
-<path d="M6 44h52l-6 14H12z"/>
-<path d="M6 20l12 12 14-18 14 18 12-12-6 24H12z"/>
-</svg>
-</h1>
+  <div class="trader-name">
+    💎 ગુજરાતી 𝐓𝐑𝐀𝐃𝐄𝐑 💎
+  </div>
 
-<p>
-<svg class="icon" viewBox="0 0 24 24">
-<polyline points="3,17 9,11 13,15 21,7"/>
-</svg>
-India’s Best Stock Market Channel
-</p>
+  <!-- TELEGRAM JOIN BUTTON -->
+  <a href="https://t.me/+DUMUrNuIsWQ0ZjQ1"
+     target="_blank"
+     class="cta subscribe-btn">
+    <i class="fab fa-telegram-plane"></i> 𝐉𝐎𝐈𝐍 𝐎𝐔𝐑 𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌
+  </a>
 
-<p>Start your jackpot profit journey today!</p>
+  <h1>India’s Most Trusted Stock Market Community</h1>
+  <p>Free Signals • Daily Analysis • Smart Risk Management</p>
 
-<a href="https://t.me/+wp6SQOlPQEBiNTVl"
-class="btn"
-target="_blank"
-rel="noopener noreferrer"
-id="joinTelegram">
-<svg class="tg-icon" viewBox="0 0 24 24">
-<path d="M22 2L2 11l5 2 2 6 4-4 5 4 4-17z"/>
-</svg>
-𝐉𝐎𝐈𝐍 𝐎𝐔𝐑 𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌
-</a>
+</section>
 
-<div class="section">
-<p>
-<svg class="icon" viewBox="0 0 24 24">
-<circle cx="12" cy="12" r="9"/>
-<circle cx="12" cy="12" r="4"/>
-</svg>
-Technical & Fundamental analysis by SEBI Registered Analysts
-</p>
+<section class="info">
+  <div class="card">
 
-<p>
-<svg class="icon icon-fill" viewBox="0 0 24 24">
-<path d="M13 2L3 14h7l-1 8 10-12h-7z"/>
-</svg>
-Intraday, Options, NIFTY & BANKNIFTY Calls
-</p>
+    <div class="point">
+      <i class="fa-solid fa-chart-line"></i>
+      <span>Intraday, Options, NIFTY & BANKNIFTY Calls</span>
+    </div>
+
+    <div class="point">
+      <i class="fa-solid fa-bullseye"></i>
+      <span>Accurate Entry, Exit & Target Levels</span>
+    </div>
+
+    <div class="point">
+      <i class="fa-solid fa-shield"></i>
+      <span>Risk Management Focused Strategy</span>
+    </div>
+
+    <div class="point">
+      <i class="fa-solid fa-fire"></i>
+      <span>Daily Free & Premium Market Analysis</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="footer">
+  © 2026 Gujarati Trader • All Rights Reserved
 </div>
 
-<div class="section">
-<h2>Live Client Profit</h2>
-<div class="profit-box" id="profitBox"></div>
-</div>
-
-<footer>
-© 2026 Official Pankaj Bhardwaj | All Rights Reserved
-</footer>
-
-</div>
-
+<!-- TRACKING SCRIPT -->
 <script>
-/* ===== PROFIT FEED – UNCHANGED ===== */
-const profitBox = document.getElementById("profitBox");
-const names = ["Rajesh","Priya","Anil","Kiran","Neha","Suresh","Divya","Vikram","Pooja","Ravi"];
+const PAGEVIEW_KEY = "gt_pageview_tracked";
+const SUBSCRIBE_KEY = "gt_subscribe_tracked";
 
-function generateProfit() {
-    const name = names[Math.floor(Math.random() * names.length)];
-    const amount = (Math.random() * 5000 + 500).toFixed(2);
-    const div = document.createElement("div");
-    div.className = "profit-entry";
-    div.innerHTML = `<span>${name}</span><span class="profit-amount">+₹${amount}</span>`;
-    profitBox.prepend(div);
-    if (profitBox.childElementCount > 6) {
-        profitBox.removeChild(profitBox.lastChild);
-    }
+/* PAGE VIEW - ONLY ONCE */
+if (!localStorage.getItem(PAGEVIEW_KEY)) {
+    fbq('track', 'PageView');
+    localStorage.setItem(PAGEVIEW_KEY, "true");
+    console.log("✅ PageView tracked");
 }
-setInterval(generateProfit, 2000);
 
-/* ✅ SUBSCRIBE EVENT – ONE TIME PER DEVICE */
-document.getElementById("joinTelegram").addEventListener("click", function () {
+/* TELEGRAM JOIN - ONLY ONCE */
+document.querySelector(".subscribe-btn").addEventListener("click", function () {
 
-    if (!localStorage.getItem("pb_subscribe_fired")) {
+    if (!localStorage.getItem(SUBSCRIBE_KEY)) {
 
-        if (typeof fbq === "function") {
-            fbq('track', 'Subscribe');
-        }
+        fbq('track', 'Lead');
+        fbq('trackCustom', 'TelegramSubscribe', {
+            source: 'Landing Page',
+            platform: 'Telegram'
+        });
 
-        localStorage.setItem("pb_subscribe_fired", "true");
+        localStorage.setItem(SUBSCRIBE_KEY, "true");
+        console.log("✅ Subscribe tracked");
     }
 });
 </script>
