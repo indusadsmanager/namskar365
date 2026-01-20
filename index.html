@@ -6,6 +6,7 @@
 <title>Official Pankaj Bhardwaj</title>
 
 <style>
+/* ===== ORIGINAL CSS – UNCHANGED ===== */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #000;
@@ -14,7 +15,6 @@ body {
     color: #fff;
     text-align: center;
 }
-
 .container {
     max-width: 600px;
     width: 92%;
@@ -24,7 +24,6 @@ body {
     padding: 25px 20px;
     box-shadow: 0 8px 30px rgba(255,215,0,0.25);
 }
-
 .logo {
     width: 150px;
     height: 150px;
@@ -32,7 +31,6 @@ body {
     object-fit: cover;
     box-shadow: 0 0 35px rgba(255,215,0,0.6);
 }
-
 h1 {
     font-size: 26px;
     font-weight: 700;
@@ -43,13 +41,11 @@ h1 {
     gap: 10px;
     flex-wrap: wrap;
 }
-
 p {
     font-size: 15px;
     color: #ccc;
     margin: 6px 0;
 }
-
 .icon {
     width: 18px;
     height: 18px;
@@ -60,29 +56,24 @@ p {
     vertical-align: middle;
     animation: float 2s infinite ease-in-out, glow 2s infinite alternate;
 }
-
 .icon-fill {
     fill: gold;
     stroke: gold;
 }
-
 @keyframes glow {
     from { filter: drop-shadow(0 0 6px gold); }
     to { filter: drop-shadow(0 0 14px orange); }
 }
-
 @keyframes float {
     0%,100% { transform: translateY(0); }
     50% { transform: translateY(-4px); }
 }
-
 .crown {
     width: 28px;
     height: 28px;
     fill: gold;
     animation: glow 1.8s infinite alternate;
 }
-
 .btn {
     display: inline-flex;
     align-items: center;
@@ -99,23 +90,19 @@ p {
     text-decoration: none;
     animation: pulse 1.5s infinite;
 }
-
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 rgba(255,45,45,.6); }
     70% { box-shadow: 0 0 0 15px rgba(255,45,45,0); }
     100% { box-shadow: 0 0 0 0 rgba(255,45,45,0); }
 }
-
 .tg-icon {
     width: 20px;
     height: 20px;
     fill: gold;
 }
-
 .section {
     margin-top: 25px;
 }
-
 .profit-box {
     background: #111;
     padding: 15px;
@@ -124,7 +111,6 @@ p {
     height: 170px;
     overflow: hidden;
 }
-
 .profit-entry {
     font-size: 14px;
     margin: 8px 0;
@@ -133,18 +119,15 @@ p {
     align-items: center;
     color: #eee;
 }
-
 .profit-amount {
     color: #00ff88;
     font-weight: bold;
 }
-
 footer {
     margin-top: 25px;
     font-size: 12px;
     color: #777;
 }
-
 @media (max-width: 360px) {
     h1 { font-size: 22px; }
     .logo { width: 130px; height: 130px; }
@@ -152,7 +135,7 @@ footer {
 }
 </style>
 
-<!-- META PIXEL (ONE TIME PER DEVICE) -->
+<!-- ===== META PIXEL BASE (UNCHANGED STRUCTURE) ===== -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -160,11 +143,14 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
+/* ✅ INIT ALWAYS */
+fbq('init', '739727151721207');
+
+/* ✅ PAGE VIEW – ONE TIME PER DEVICE */
 if (!localStorage.getItem("pb_pageview_fired")) {
-    fbq('init', '739727151721207');
     fbq('track', 'PageView');
     localStorage.setItem("pb_pageview_fired", "true");
 }
@@ -244,7 +230,7 @@ Intraday, Options, NIFTY & BANKNIFTY Calls
 </div>
 
 <script>
-/* PROFIT FEED */
+/* ===== PROFIT FEED – UNCHANGED ===== */
 const profitBox = document.getElementById("profitBox");
 const names = ["Rajesh","Priya","Anil","Kiran","Neha","Suresh","Divya","Vikram","Pooja","Ravi"];
 
@@ -261,10 +247,15 @@ function generateProfit() {
 }
 setInterval(generateProfit, 2000);
 
-/* SUBSCRIBE EVENT – ONE TIME */
+/* ✅ SUBSCRIBE EVENT – ONE TIME PER DEVICE */
 document.getElementById("joinTelegram").addEventListener("click", function () {
+
     if (!localStorage.getItem("pb_subscribe_fired")) {
-        fbq('track', 'Subscribe');
+
+        if (typeof fbq === "function") {
+            fbq('track', 'Subscribe');
+        }
+
         localStorage.setItem("pb_subscribe_fired", "true");
     }
 });
